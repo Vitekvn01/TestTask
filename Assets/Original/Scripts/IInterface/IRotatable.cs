@@ -1,8 +1,0 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public interface IRotatable
-{
-    void Rotate(float dirRot, float sensitivity, float rotationSpeed);
-}

@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class Inventory : MonoBehaviour
+public class Inventory : MonoBehaviour, IService
 {
     private List<Item> _items = new List<Item>();
 
+    private void Awake()
+    {
+        ServiceLocator.RegisterService<Inventory>(this);
+    }
     public void AddItem(Item item)
     {
         _items.Add(item);
