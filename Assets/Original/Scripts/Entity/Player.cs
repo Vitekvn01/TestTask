@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Transform cameraTransform;
-    [SerializeField] private float _moveSpeed = 100f;
-    [SerializeField] private float _rotationSpeed = 100f;
-    [SerializeField] private float _mouseSensitivity = 1f;
+    public Camera Camera;
+    public float MoveSpeed;
+    public float RotationSpeed;
+    public float MouseSensitivity;
 
-    private void Awake()
+    private PlayerController _playerController;
+    private Inventory _inventory;
+
+    private void Start()
     {
-        
+        _playerController = ServiceLocator.GetService<PlayerController>();
+        _playerController.Init(this);
     }
+
+
 }

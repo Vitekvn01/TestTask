@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotationLogic : MonoBehaviour
+public class RotationLogic
 {
     private float _rotationSpeed;
     private float _mouseSensitivity;
@@ -16,7 +16,7 @@ public class RotationLogic : MonoBehaviour
 
     private IInputController _inputController;
 
-    public RotationLogic(Transform objectTransform, Transform cameraTransform, IInputController inputController, float speed, float sensitivity)
+    public RotationLogic(Transform objectTransform, Transform cameraTransform, float speed, float sensitivity, IInputController inputController)
     {
         _rotationSpeed = speed;
         _mouseSensitivity = sensitivity;
