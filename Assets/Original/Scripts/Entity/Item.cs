@@ -16,7 +16,6 @@ public class Item : MonoBehaviour, IInteractivuble
         Inventory inventory = ServiceLocator.GetService<Inventory>();
         inventory.AddItem(this);
 
-        // Óםטקעמזאול ןנוהלוע ןמסכו ןמהבמנא
         Item3DView.SetActive(false);
     }
 }
